@@ -1,13 +1,15 @@
 use curl::easy::Easy;
-use std::io::{stdout, Write};
+use std::{io::{stdout, Write}, ptr::null};
 
-pub fn get_address_data(pubkey:String) -> Easy {
+pub fn get_address_data(search_addr:String) -> Easy {
     let mut easy = Easy::new();
-    easy.url("https://mempool.space/api/address/1wiz18xYmhRX6xStj2b9t1rwWX4GKUgpv").unwrap();
+    let mempool_addr_api = String::from("https://mempool.space/api/address/");
+    let api_url = mempool_addr_api + &search_addr;
+    easy.url(&api_url).unwrap();
     easy.write_function(|data| {
         stdout().write_all(data).unwrap();
         Ok(data.len())
     }).unwrap();
     easy.perform().unwrap();
-    return easy;
+    easy
 }
