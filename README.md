@@ -1,5 +1,7 @@
 # Bitmate
 
+![Alt text](/images/btc_logo.png)
+
 Bitmate is an open-source Bitcoin library implemented in Rust. It provides a set of tools and utilities for working with Bitcoin, including key generation, transaction creation and signing, address validation, and more.
 
 ## Features
@@ -19,28 +21,38 @@ To use Bitmate as it is today you will need to clone the repository and perform 
 1. Clone Bitmate GitHub repository:
 
 
-```git clone https://github.com/seu-usuario/bitmate.git```
+```sh
+git clone https://github.com/seu-usuario/bitmate.git
+```
 
 
-2. Navigate to the project directory:
+1. Navigate to the project directory:
 
 
-```cd bitmate```
+```sh
+cd bitmate
+```
 
 
-3. Compile and install Bitmate using Cargo:
+1. Compile and install Bitmate using Cargo:
 
 
-```cargo install --path .```
+```sh
+cargo install --path .
+```
 
 
-4. Build the the project:
+1. Build the the project:
 
 
-```cargo build```
+```sh
+cargo build
+```
 
 
-5. Execute it:
+1. Execute it:
 
 
-```./bitmate```
+```sh
+bash bitmate
+```
