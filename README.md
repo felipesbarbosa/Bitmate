@@ -54,5 +54,5 @@ cargo build
 
 
 ```sh
-bash bitmate
+cargo run
 ```
