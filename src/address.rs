@@ -16,7 +16,7 @@ pub struct Addressinfo {
 }
 
 pub fn create_new_address(network:Network) -> Addressinfo {
-
+    
     //Creating new ECDSA variable and secret key
     let secp = Secp256k1::new();
     let key_pair = KeyPair::new(&secp, &mut rand::thread_rng());
